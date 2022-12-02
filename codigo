@@ -3,3 +3,5 @@ def laberinto(dimension,muros):
     for i in range(dimension):
         fila = []
         for j in range(dimension):
+            if tuple([i,j]) in muros:
+                fila.append("X")
