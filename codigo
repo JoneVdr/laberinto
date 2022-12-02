@@ -1,9 +1,5 @@
-from random import randint
-laberinto = [
-    [' ', 'X', 'X', 'X', 'X'],
-    [' ', 'X', ' ', ' ', ' '],
-    [' ', 'X', ' ', 'X', ' '],
-    [' ', ' ', ' ', 'X', ' '],
-    ['X', 'X', 'X', 'X', 'S']
-    ]
-muro = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3))
+def laberinto(dimension,muros):
+    laberinto = []
+    for i in range(dimension):
+        fila = []
+        for j in range(dimension):
