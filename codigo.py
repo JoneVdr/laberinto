@@ -13,3 +13,10 @@ muro = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4
 lab = laberinto(5,muro)
 for i in lab:
     print(''.join(i))
+
+def recorre_laberinto(laberinto):
+    movimientos = ['Abajo']
+    while (fila < n-1 and columna < n-1):
+        if movimientos[-1] != 'Arriba' and fila + 1 < n and laberinto[fila + 1][columna] != 'X':
+            fila += 1
+            movimientos.append('Abajo')
