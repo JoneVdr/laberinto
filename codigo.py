@@ -26,3 +26,9 @@ def recorre_laberinto(laberinto):
         elif movimientos[-1] != 'Izquierda' and columna + 1 < n and laberinto[fila][columna + 1] != 'X':
             columna += 1
             movimientos.append('Derecha')
+        elif movimientos[-1] != 'Derecha' and columna - 1 > 0 and laberinto[fila][columna - 1] != 'X':
+            columna -= 1
+            movimientos.append('Izquierda')
+        else:
+            movimientos.append('No hay salida')
+    return movimientos
